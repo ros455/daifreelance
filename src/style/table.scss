@@ -1,0 +1,46 @@
+.wrap_table {
+    
+}
+
+.block_table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.table_item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+
+    p, h3 {
+        width: 20%;
+    }
+}
+
+.table_button_block {
+    button {
+        border: 1px solid black;
+        margin: 10px 10px;
+        padding: 5px;
+    }
+}
+
+.number_block {
+    display: flex;
+}
+
+.number {
+    padding: 0px 10px;
+    * {
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+}
+
+.dot {
+    line-height: 85px;
+}
