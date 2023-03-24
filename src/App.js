@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import CalculatePublick from './component/CalculatePublick.js';
+import AdminPanel from './component/AdminPanel.js';
 
 function App() {
   return (
     <div className="App">
-      <h1> 99999999999</h1>
-      <h1> 99999999999</h1>
+      <CalculatePublick/>
+      <AdminPanel/>
     </div>
   );
 }
