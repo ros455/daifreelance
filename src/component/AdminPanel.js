@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style/admin.css'
 import '../style/style-null.css'
+import Table from './Table';
 
 const AdminPanel = () => {
     return (
@@ -34,7 +35,9 @@ const AdminPanel = () => {
                     </div>
                     <div className='content__history'>
                         <h2 className='admin__h2'>History</h2>
-                        <div className='tablet'></div>
+                        <div className='tablet'>
+                            <Table/>
+                        </div>
                         <div className='pagination'>
                         <button className='btn'> <img src='/img/left-pagination.svg'/>  </button>
                         <button className='btn'> <img src='/img/right-pagination.svg'/> </button>
