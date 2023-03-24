@@ -298,3 +298,11 @@
   cursor: pointer;
   z-index: 1000;
 }
+
+.calc__footer{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+
