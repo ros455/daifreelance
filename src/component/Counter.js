@@ -7,10 +7,10 @@ const Counter = ({ val, time}) => {
   useEffect(() => {
       const intervalId = setInterval(() => {
         setCurrVal((prevValue) => {
-          const newValue = prevValue + 1;
+          const newValue = prevValue + 5;
           return Math.min(newValue, val);
         });
-      }, time);
+      }, 1);
 
       return () => clearInterval(intervalId);
   }, [ time, val]);
