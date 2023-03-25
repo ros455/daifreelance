@@ -58,13 +58,53 @@ const CalculatePublick = () => {
   const [angle, setAngle] = useState(0);
 
   useEffect(() => {
-    const num = 50;
+    const num = lastAir;
 
-    if(true) {
-      setAngle(((num * 2) + 240 + (num/3)).toFixed(0))
+    if(num == 0) {
+        setAngle(num + 212)
+    } else if (num <= 5) {
+        setAngle(num + 220)
+    } else if (num <= 10) {
+        setAngle(num + 230)
+    } else if (num <= 15) {
+        setAngle(num + 239)
+    } else if (num <= 20) {
+        setAngle(num + 250)
+    } else if (num <= 25) {
+        setAngle(num + 263)
+    } else if (num <= 30) {
+        setAngle(num + 275)
+    } else if (num <= 35) {
+        setAngle(num + 282)
+    } else if (num <= 40) {
+        setAngle(num + 295)
+    } else if (num <= 45) {
+        setAngle(num + 305)
+    } else if (num <= 50) {
+        setAngle(num + 312)
+    } else if (num <= 55) {
+        setAngle(num + 320)
+    } else if (num <= 60) {
+        setAngle(num + 330)
+    } else if (num <= 65) {
+        setAngle(num + 340)
+    } else if (num <= 70) {
+        setAngle(num + 348)
+    } else if (num <= 75) {
+        setAngle(num + 355)
+    } else if (num <= 80) {
+        setAngle(num + 368)
+    } else if (num <= 85) {
+        setAngle(num + 380)
+    } else if (num <= 90) {
+        setAngle(num + 388)
+    } else if (num <= 95) {
+        setAngle(num + 395)
+    } else if (num <= 100) {
+        setAngle(num + 405)
     } 
     console.log('number',num);
-  },[])
+  },[lastAir])
 
     return (
         <div>
@@ -88,7 +128,7 @@ const CalculatePublick = () => {
                                 <h2>Rate</h2>
                                 <ul>
                                     <div>{lastRate &&
-                                        <Counter val={lastRate} time={15}/>
+                                        <Counter val={lastRate} time={0.1}/>
                                     }</div>
                                 </ul>
                             </div>
@@ -96,7 +136,7 @@ const CalculatePublick = () => {
                                 <h2>Emission</h2>
                                 <ul>
                                     <div>{lastEmission &&
-                                        <Counter val={lastEmission} time={15}/>}
+                                        <Counter val={lastEmission} time={0.1}/>}
                                     </div>
                                 </ul>
                             </div>
