@@ -63,6 +63,10 @@
     margin: 100px 0 70px 0;
 }
 
+.content__wraper .logo img{
+    width: 100%;
+}
+
 .calc__wrap {
     display: flex;
     flex-direction: column;

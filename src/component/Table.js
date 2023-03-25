@@ -72,23 +72,22 @@ const Table = () => {
     return (
         <>
             <div className='wrap_table'>
-            <h1>History</h1>
             <div className='block_table'>
             <div className='table_item'>
-                        <h3>Date</h3>
-                        <h3>Emission</h3>
-                        <h3>Rate</h3>
-                        <h3>Air</h3>
-                        <h3>Balanse {totalbalanceHeader}</h3>
+                        <h3 className='table_item-date' >Date</h3>
+                        <h3 className='table_item-emision' >Emission</h3>
+                        <h3 className='table_item-rate' >Rate</h3>
+                        <h3 className='table_item-air' >Air</h3>
+                        <h3 className='table_item-balance' >Balanse {totalbalanceHeader}</h3>
                     </div>
                 {allData && 
                 allData.map((el) => (
                     <div key={el._id} className='table_item'>
-                        <p>{el.createdAt.slice(0, 10)}</p>
-                        <p>{el.emission}</p>
-                        <p>{el.rate}</p>
-                        <p>{el.air}</p>
-                        <p>{el?.balans}</p>
+                        <p className='table_item-p table_item-p--border' >{el.createdAt.slice(0, 10)}</p>
+                        <p className='table_item-p table_item-p--border' >{el.emission}</p>
+                        <p className='table_item-p table_item-p--border' >{el.rate}</p>
+                        <p className='table_item-p table_item-p--border' >{el.air}</p>
+                        <p className='table_item-p' >{el?.balans}</p>
                     </div>
                 ))}
             </div>
