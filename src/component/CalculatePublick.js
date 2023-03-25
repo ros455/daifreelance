@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
+import AnimWave from '../component/AnimWave'; 
 import '../style/calc.css'
 import '../style/style-null.css'
+
 
 
 const CalculatePublick = () => {
@@ -10,6 +12,9 @@ const CalculatePublick = () => {
     return (
         <div>
             <div className='calc__wraper'>
+                <div className='background'>
+                    <AnimWave/>
+                </div>
                 <div className='calc__head'>
                     <div className='calc__head-item site__name'>
                     <img src='/img/miniLogo.svg' />
@@ -150,7 +155,7 @@ const CalculatePublick = () => {
                     </div>
                 </div>
                 <div className='calc__footer'>
-                    <div className='calc__footer-email'>info@daiwo.ai</div>
+                    <div className='calc__footer-email'> <img src='/img/email.svg' /> info@daiwo.ai</div>
                     <div className='calc__footer-info'>Neural economic network D.A.I.Wo Ver 1.00</div>
                 </div>
             </div>
