@@ -2,6 +2,7 @@ import AnimWave from '../component/AnimWave';
 import React, { useState, useEffect } from 'react';
 import '../style/calc.css'
 import '../style/style-null.css'
+import '../style/circule.scss'
 import CounterYear from './CounterYear';
 import Counter from './Counter';
 
@@ -53,6 +54,18 @@ const CalculatePublick = () => {
     console.log('lastEmission', lastEmission);
     console.log('lastAir', lastAir);
 
+    const [isDragging, setIsDragging] = useState(false);
+  const [angle, setAngle] = useState(0);
+
+  useEffect(() => {
+    const num = 50;
+
+    if(true) {
+      setAngle(((num * 2) + 240 + (num/3)).toFixed(0))
+    } 
+    console.log('number',num);
+  },[])
+
     return (
         <div>
             <div className='calc__wraper'>
@@ -96,15 +109,17 @@ const CalculatePublick = () => {
                                     <div className='eclipse-gradient'></div>
                                     <div className='eclipse-gradient-second'></div>
                                     <div className='eclipse-speed'></div>
+                                </div>
+                                    <div className='back__small-circle'></div>
                                     <div className='debug'>
-                                        {lastAir && lastAir}%
+                                        {lastAir && lastAir}
                                     </div>
-                                    <div className='circle'>
-                                        <div className='dot'></div>
-                                        <div className='back__small-circle'></div>
+                                    <div className='circule-absolute'>
+                                        <div className='circle'>
+                                        <div className="dot" style={{ transform: `rotate(${angle}deg)` }}></div>
+                                    </div>
                                     </div>
                                 </div>
-                            </div>
                             <div className='calc__wrap-item balance'>
                                 <h2>Balance</h2>
                                 <ul>
