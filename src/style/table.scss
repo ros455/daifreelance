@@ -1,0 +1,87 @@
+.wrap_table {
+    
+}
+
+.block_table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // border: 1px solid black;
+    margin-top: 10px;
+}
+
+.table_item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 95%;
+    border-bottom: 1px solid #9c63f7a2;
+    font-family: 'Kanit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+
+    .table_item-date{
+        border-right: 1px solid #9c63f7a2;   
+        
+    }
+
+    .table_item-emision{
+        border-right: 1px solid #9c63f7a2;   
+        
+    }
+
+    .table_item-rate{
+        border-right: 1px solid #9c63f7a2;   
+         
+    }
+
+    .table_item-air{
+        border-right: 1px solid #9c63f7a2;   
+           
+    }
+
+    p, h3 {
+        width: 20%;
+        
+    }
+
+    .table_item-p{
+        border-bottom: 1px solid #9c63f7a2;
+
+    }
+
+    .table_item-p--border{
+        border-right: 1px solid #9c63f7a2;   
+        opacity: 0.65; 
+    }
+}
+
+.table_button_block {
+    button {
+        border: 1px solid black;
+        margin: 10px 10px;
+        padding: 5px;
+    }
+}
+
+.number_block {
+    display: flex;
+}
+
+.number {
+    padding: 0px 10px;
+    * {
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+}
+
+.dot {
+    line-height: 85px;
+}
