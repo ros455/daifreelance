@@ -298,6 +298,10 @@
     background: #263245;
     border: 1.17614px solid rgba(255, 255, 255, 0.02);
     box-shadow: -4.70455px -4.70455px 10px rgba(255, 255, 255, 0.05), 4.70455px 4.70455px 10px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px -1px 40px 0px rgba(7,237,210,0.7);
+    -moz-box-shadow: 0px -1px 40px 0px rgba(7,237,210,0.7);
+    box-shadow: 0px -1px 40px 0px rgba(7,237,210,0.7);
+
 }
 
 
