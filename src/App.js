@@ -10,9 +10,7 @@ function App() {
     <div className="App">
       <CalculatePublick/>
       <AdminPanel/>
-      {/* <Table/> */}
-      {/* <AnimWave/> */}
-    </div>
+   </div>
   );
 }
 
