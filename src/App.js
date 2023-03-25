@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <CalculatePublick/>
       <AdminPanel/>
-      {/* <Table/> */}
     </div>
   );
 }
