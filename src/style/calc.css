@@ -103,7 +103,7 @@
 
 .calc__wrap_row{
     display: flex;
-    width: 50%;
+    width: 65%;
     justify-content: space-around;
     margin-bottom: 78px;
 }
