@@ -2,7 +2,7 @@
 
 .calc__wraper{
     position: relative;
-    width: 1300px;
+    max-width: 1300px;
     overflow: hidden;
     height: 1127px;
     background: #1F2A3C  0 0/cover no-repeat;
@@ -342,12 +342,24 @@
     .calc__wrap-item{
         flex: 0 1 40%;
     }
+
+    .back__small-circle{
+        left: 230px;
+    }
+
+    .calc__wrap .calc__wrap_row .air .debug{
+        left: 255px;
+    }
 }
 
 @media only screen and (max-width: 1055px){
     .air__speed{
         scale: 1.2;
         top: 1%;
+    }
+
+    .circle .dot{
+        left:53.5%
     }
 }
 

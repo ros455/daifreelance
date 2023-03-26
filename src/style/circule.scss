@@ -1,4 +1,8 @@
 
+
+
+
+
 .debug {
   color: rgba(0, 0, 0, 0);
   font-family: monospace;
@@ -74,5 +78,13 @@
       border-radius: 50%;
       cursor: pointer;
     }
+
+
+    @media (max-width: 1151px){
+          left:53.5%
+  }
+
   }
 }
+
+
