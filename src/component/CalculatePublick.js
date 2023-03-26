@@ -59,8 +59,7 @@ const CalculatePublick = () => {
   const [angle, setAngle] = useState(0);
 
   useEffect(() => {
-    // const num = lastAir;
-    const num = 0;
+    const num = lastAir;
 
     if(num == 0) {
         setAngle(num + 212)
@@ -129,17 +128,17 @@ const CalculatePublick = () => {
                             <div className='calc__wrap-item rate'>
                                 <h2>Rate</h2>
                                 <ul>
-                                    {/* <div>{lastRate &&
+                                    <div>{lastRate &&
                                         <Counter val={lastRate} time={0.1}/>
-                                    }</div> */}
+                                    }</div>
                                 </ul>
                             </div>
                             <div className='calc__wrap-item emission'>
                                 <h2>Emission</h2>
                                 <ul>
-                                    {/* <div>{lastEmission &&
+                                    <div>{lastEmission &&
                                         <Counter val={lastEmission} time={0.1}/>}
-                                    </div> */}
+                                    </div>
                                 </ul>
                             </div>
                         </div>
@@ -150,9 +149,9 @@ const CalculatePublick = () => {
                                 </div>
                             <div className='calc__wrap-item balance'>
                                 <h2>Balance</h2>
-                                {/* <ul>
+                                <ul>
                                     <CounterYear firstValue={Number(totalbalance)} val={Number(totalbalanceHeader)} time={time} />
-                                </ul> */}
+                                </ul>
                             </div>
                         </div>
                     </div>
