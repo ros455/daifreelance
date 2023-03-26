@@ -74,8 +74,7 @@ const AdminPanel = () => {
       setAir(0.5);
       return
     }
-
-    console.log('airInFunc',airInFunc);
+    
     const airInProcent = airInFunc / 100;
     setAir(airInProcent);
   }

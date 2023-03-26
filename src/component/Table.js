@@ -21,7 +21,7 @@ const Table = ({currentItems, totalBalance}) => {
                 </p>
                 <p className="table_item-p table_item-p--border">{el.emission}</p>
                 <p className="table_item-p table_item-p--border">{el.rate}</p>
-                <p className="table_item-p table_item-p--border">{el.air}</p>
+                <p className="table_item-p table_item-p--border">{el.air * 100}</p>
                 <p className="table_item-p table_item-balance">{el?.balans}</p>
               </div>
             ))}

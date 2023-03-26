@@ -54,7 +54,6 @@ const CalculatePublick = () => {
 
   useEffect(() => {
     const num = lastAir;
-    // const num = 50;
 
     if(num == 0) {
         setAngle(num + 215)
@@ -100,7 +99,7 @@ const CalculatePublick = () => {
         setAngle(num + 457)
     }
   },[lastAir])
-  console.log('!!!');
+  
     return (
         <div>
             <div className='calc__wraper'>
