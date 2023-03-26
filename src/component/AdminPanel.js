@@ -15,7 +15,7 @@ const AdminPanel = () => {
   useEffect(() => {
     fetch("https://calc-server.herokuapp.com/getall")
       .then((res) => res.json())
-      .then((res) => setAllData(res));
+      .then((res) => setAllData(res.reverse()));
   }, []);
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const AdminPanel = () => {
       setAir(0.5);
       return
     }
-    
+
     const airInProcent = airInFunc / 100;
     setAir(airInProcent);
   }
