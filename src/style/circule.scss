@@ -105,11 +105,11 @@
     transition: 1s;
     position: absolute;
     background-color: #07EDD2;
-      width: 24%;
+      width: 10%;
       z-index: 90;
       height: 100%;
-      left: 37%;
-      top: -36px;
+      left: 42%;
+      top: -32px;
     transform: rotate(0deg);
     transform-origin: center bottom;
     clip-path: polygon(44% 0%, 0 45%, 100% 45%);
@@ -133,9 +133,9 @@
 
 
     @media (max-width: 1153px){
-      height: 123%;
-      left: 37%;
-      top: -47px;
+      height: 87%;
+      left: 28%;
+      top: -30px;
       clip-path: polygon(44% 0%, 0 35%, 100% 35%);
       
   }

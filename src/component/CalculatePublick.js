@@ -59,7 +59,8 @@ const CalculatePublick = () => {
   const [angle, setAngle] = useState(0);
 
   useEffect(() => {
-    const num = lastAir;
+    // const num = lastAir;
+    const num = 100;
 
     if(num == 0) {
         setAngle(num + 212)
