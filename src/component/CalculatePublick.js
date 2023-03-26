@@ -126,7 +126,7 @@ const CalculatePublick = () => {
                                 <h2>Rate</h2>
                                 <ul>
                                     <div>{lastRate &&
-                                        <Counter val={lastRate} time={1}/>
+                                        <Counter val={lastRate} time={0.1}/>
                                     }</div>
                                 </ul>
                             </div>
