@@ -74,7 +74,7 @@ const AdminPanel = () => {
       setAir(0.5);
       return
     }
-    
+
     const airInProcent = airInFunc / 100;
     setAir(airInProcent);
   }
@@ -112,7 +112,7 @@ const AdminPanel = () => {
           <div className="content__history">
             <h2 className="admin__h2">History</h2>
             <div className="tablet">
-              <Table currentItems={currentItems} totalBalance={totalBalance}/>
+              <Table currentItems={currentItems.reverse()} totalBalance={totalBalance}/>
             </div>
             <div className="pagination">
               <button className="btn"
