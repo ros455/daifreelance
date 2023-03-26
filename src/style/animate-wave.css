@@ -8,13 +8,13 @@
 
     50%{
         top: 0%;
-        
+        opacity: 40%;
     }
 
     100%{
 
         top: 100%;
-        opacity: 70%;
+        opacity: 100%;
     }
 }  
 
@@ -28,13 +28,13 @@
 .wrap_1{
     top: 0px;
     left: -58px;
-    opacity: 100%;
+    opacity: 10%;
 }
 
 .wrap_2{
     left: -71px;
     top: -20px;
-    opacity: 95%;
+    opacity: 20%;
 }
 
 .wrap_4{
