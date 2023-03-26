@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react';
 import '../style/table.scss';
 
 const Table = ({currentItems, totalBalance}) => {
-  
+  console.log('TAble',currentItems);
     return (
       <div className="wrap_table">
         <div className="block_table">
