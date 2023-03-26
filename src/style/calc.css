@@ -2,7 +2,7 @@
 
 .calc__wraper{
     position: relative;
-    max-width: 1300px;
+    max-width: 100%;
     overflow: hidden;
     height: 1127px;
     background: #1F2A3C  0 0/cover no-repeat;
