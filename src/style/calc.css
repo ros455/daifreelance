@@ -325,13 +325,22 @@
 
 @media only screen and (max-width: 1850px){
     .calc__wrap_row{
-        width: 100%;
+        width: 70%;
     }
 
-
+}
+@media only screen and (max-width: 1410px){
+    .calc__wrap_row{
+        width: 80%;
+    }
 
 }
 @media only screen and (max-width: 1153px){
+    
+    .calc__wrap_row{
+        width: 100%;
+    }
+
     .calc__wrap-item{
         flex: 0 1 50%;
     }
@@ -388,14 +397,28 @@
     }
 
 }
+@media only screen and (max-width: 488px){
+    .calc__wrap-item ul .number h1 {
+        width: 9px;
+    }
+
+}
+@media only screen and (max-width: 440px){
+    .calc__wrap-item ul .number h1 {
+        width: 8px;
+    }
+
+}
+@media only screen and (max-width: 410px){
+    .calc__wrap-item ul .number h1 {
+        width: 7px;
+    }
+
+}
 
 
 @media only screen and (max-width: 393px){
     
-    .calc__wrap-item ul .number{
-        font-size: 3vh;
-    }
-
     .calc__head .contact {
         line-height: 20px;
     }
@@ -415,8 +438,12 @@
         margin: 10px 0;
     }
 
-    .calc__wrap-item ul .number{
-        font-size: 2vh;
+    .calc__wrap-item ul .number {
+        font-size: 10px;
+    }
+
+    .calc__wrap-item ul .number h1 {
+        width: 6px;
     }
 
     .air__speed{
@@ -425,4 +452,12 @@
     }
 }
 
+@media only screen and (max-width: 329px){
+    .calc__wrap-item ul .number {
+        font-size: 9px;
+    }
 
+    .calc__wrap-item ul .number h1 {
+        width: 5px;
+    }
+}
