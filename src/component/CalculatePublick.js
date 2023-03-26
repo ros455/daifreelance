@@ -5,6 +5,7 @@ import '../style/style-null.css'
 import '../style/circule.scss'
 import CounterYear from './CounterYear';
 import Counter from './Counter';
+import AirCounter from './AirCounter';
 
 
 const CalculatePublick = () => {
@@ -58,7 +59,8 @@ const CalculatePublick = () => {
   const [angle, setAngle] = useState(0);
 
   useEffect(() => {
-    const num = lastAir;
+    // const num = lastAir;
+    const num = 100;
 
     if(num == 0) {
         setAngle(num + 212)
@@ -144,21 +146,7 @@ const CalculatePublick = () => {
                         <div className='calc__wrap_row'>
                             <div className='calc__wrap-item air'>
                                 <h2>Air</h2>
-                                <div className='air__speed'>
-                                    <div className='back__big-circle'></div>
-                                    <div className='eclipse-gradient'></div>
-                                    <div className='eclipse-gradient-second'></div>
-                                    <div className='eclipse-speed'></div>
-                                </div>
-                                    <div className='back__small-circle'></div>
-                                    <div className='debug'>
-                                        {lastAir && lastAir}
-                                    </div>
-                                    <div className='circule-absolute'>
-                                        <div className='circle'>
-                                        <div className="dot" style={{ transform: `rotate(${angle}deg)` }}></div>
-                                    </div>
-                                    </div>
+                                <AirCounter angle={angle} lastAir={lastAir}/>
                                 </div>
                             <div className='calc__wrap-item balance'>
                                 <h2>Balance</h2>
