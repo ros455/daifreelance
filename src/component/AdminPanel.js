@@ -70,7 +70,6 @@ const AdminPanel = () => {
 
   const handleAirFunc = (e) => {
     const airToЗercentages = e.target.value / 100;
-    console.log(airToЗercentages);
     setAir(airToЗercentages);
   }
 

@@ -16,6 +16,7 @@ const CalculatePublick = () => {
     const [time, setTime] = useState(0);
     const [totalbalance, setTotalbalance] = useState(0);
     const [totalbalanceHeader, setTotalbalanceHeader] = useState(0);
+    const [angle, setAngle] = useState(0);
 
     useEffect(() => {
         fetch("https://calc-server.herokuapp.com/getall")
@@ -50,13 +51,6 @@ const CalculatePublick = () => {
         const dateMilliseconds = dateObject.getTime();
         setTime(dateMilliseconds);
     }
-
-    console.log('lastRate', lastRate);
-    console.log('lastEmission', lastEmission);
-    console.log('lastAir', lastAir);
-
-    const [isDragging, setIsDragging] = useState(false);
-  const [angle, setAngle] = useState(0);
 
   useEffect(() => {
     const num = lastAir;
@@ -104,9 +98,8 @@ const CalculatePublick = () => {
     } else if (num <= 100) {
         setAngle(num + 405)
     } 
-    console.log('number',num);
   },[lastAir])
-
+  console.log('!!!');
     return (
         <div>
             <div className='calc__wraper'>
@@ -129,7 +122,7 @@ const CalculatePublick = () => {
                                 <h2>Rate</h2>
                                 <ul>
                                     <div>{lastRate &&
-                                        <Counter val={lastRate} time={0.1}/>
+                                        <Counter val={lastRate} time={1}/>
                                     }</div>
                                 </ul>
                             </div>

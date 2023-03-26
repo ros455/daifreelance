@@ -4,21 +4,23 @@ const Counter = ({ val, time}) => {
   const [currVal, setCurrVal] = useState(0);
   const [parseArr, setParseArr] = useState([]);
 
-  useEffect(() => {
-      const intervalId = setInterval(() => {
-        setCurrVal((prevValue) => {
-          const newValue = prevValue + 5;
-          return Math.min(newValue, val);
-        });
-      }, 1);
 
-      return () => clearInterval(intervalId);
-  }, [ time, val]);
+  useEffect(() => {
+    if(currVal < val) {
+      setTimeout(setCurrVal, time, currVal + 1);
+    } 
+    else {
+      setCurrVal(Math.min(currVal,val))
+    }
+}, [currVal]);
 
   useEffect(() => {
     const digits = currVal.toFixed(15).toString().split('.');
+    console.log('digits',digits);
     const beforeDot = digits[0].padStart(15, '0');
+    console.log('beforeDot',beforeDot);
     const afterDot = digits.length > 1 ? digits[1].padEnd(15, '0') : ''.padEnd(15, '0');
+    console.log('afterDot',afterDot);
     setParseArr(beforeDot.split('').concat('.', afterDot.split('')));
   }, [currVal]);
 

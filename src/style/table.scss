@@ -105,6 +105,22 @@
 }
 
 .active_number {
-// padding-top: 20px;
-// transition: 0.1s;
-}
+    animation-name: live;
+    animation-duration: 0.5s;
+    animation-iteration-count: inherit;
+    animation-fill-mode: forwards; /* зупинка анімації на кінцевому стані */
+  }
+  
+  @keyframes live {
+    0% {
+      padding-top: 0px;
+    }
+
+    50% {
+        padding-top: 10%;
+    }
+  
+    100% {
+      padding-top: 0%;
+    }
+  }

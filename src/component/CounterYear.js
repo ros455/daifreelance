@@ -4,7 +4,7 @@ import '../style/table.scss';
 const CounterYear = ({ firstValue, val, time }) => {
   const [currVal, setCurrVal] = useState(firstValue);
   const [parseArr, setParsArr] = useState([]);
-  const [dafaultArr, setDefaultArr] = useState(Array.from({ length: 31 }).fill('0'));
+  const [dafaultArr, setDefaultArr] = useState(Array.from({ length: 31 }).fill('1'));
 
   useEffect(() => {
     const iterations = Math.ceil(Math.abs(val - firstValue) / 0.000001);
@@ -27,9 +27,11 @@ const CounterYear = ({ firstValue, val, time }) => {
     setParsArr(beforeDot.split('').concat('.', afterDot.split('')));
   }, [currVal]);
 
+  console.log('parseArr',parseArr);
+
   return (
       <div className='number_block'>
-      {parseArr && 
+      {parseArr &&
       dafaultArr.map((num, idx) => (
         <div key={idx} className={` ${parseArr[idx] == '9' && idx < 29 ? 'active_number' : ''} number`} >
            <p className='after_number'>
