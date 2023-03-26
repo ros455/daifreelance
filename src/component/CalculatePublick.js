@@ -99,7 +99,11 @@ const CalculatePublick = () => {
         setAngle(num + 457)
     }
   },[lastAir])
-  
+
+  const handleEmail = () => {
+    window.location.href='mailto:info@daiwo.ai'
+  }
+
     return (
         <div>
             <div className='calc__wraper'>
@@ -110,7 +114,7 @@ const CalculatePublick = () => {
                     <div className='calc__head-item site__name'>
                         <img src='/img/miniLogo.svg' />
                     </div>
-                    <div className='calc__head-item contact'>Contact us</div>
+                    <div onClick={handleEmail} className='calc__head-item contact'>Contact us</div>
                 </div>
                 <div className='content__wraper'>
                     <div className='logo'>
