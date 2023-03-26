@@ -7,7 +7,7 @@ const Counter = ({ val, time}) => {
 
   useEffect(() => {
     if(currVal < val) {
-      setTimeout(setCurrVal, time, currVal + 1);
+      setTimeout(setCurrVal, time, currVal + 5);
     } 
     else {
       setCurrVal(Math.min(currVal,val))
