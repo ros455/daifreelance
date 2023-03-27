@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import "../style/admin.css";
 import "../style/style-null.css";
 import Table from "./Table";
+import { useNavigate } from "react-router-dom";
 
 const AdminPanel = () => {
+
   const [emission, setEmission] = useState(0);
   const [rate, setRate] = useState(0);
   const [air, setAir] = useState(0);
@@ -11,6 +13,8 @@ const AdminPanel = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalBalance, setTotalBalance] = useState(0);
   const itemsPerPage = 15;
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://calc-server.herokuapp.com/getall")
@@ -32,8 +36,8 @@ const AdminPanel = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = allData.slice(indexOfFirstItem, indexOfLastItem);
-
   const pageNumbers = [];
+
   for (let i = 1; i <= Math.ceil(allData.length / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
@@ -79,12 +83,16 @@ const AdminPanel = () => {
     setAir(airInProcent);
   }
 
+  const handleNavigate = () => {
+    navigate('/');
+  }
+
 
   return (
     <div>
       <div className="admin__wrap">
         <div className="admin__header">
-          <button className="btn back">
+          <button className="btn back" onClick={handleNavigate}>
             <img src="/img/arrow.svg" />
             Back
           </button>
