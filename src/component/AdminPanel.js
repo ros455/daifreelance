@@ -5,14 +5,14 @@ import Table from "./Table";
 import { useNavigate } from "react-router-dom";
 
 const AdminPanel = () => {
-  
+
   const [emission, setEmission] = useState(0);
   const [rate, setRate] = useState(0);
   const [air, setAir] = useState(0);
   const [allData, setAllData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalBalance, setTotalBalance] = useState(0);
-  const itemsPerPage = 15;
+  const itemsPerPage = 2;
 
   const navigate = useNavigate();
 
@@ -36,8 +36,8 @@ const AdminPanel = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = allData.slice(indexOfFirstItem, indexOfLastItem);
-
   const pageNumbers = [];
+
   for (let i = 1; i <= Math.ceil(allData.length / itemsPerPage); i++) {
     pageNumbers.push(i);
   }

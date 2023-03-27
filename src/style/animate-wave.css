@@ -1,4 +1,4 @@
-/* 
+
  @keyframes anim1{
     0% {
         top: 100%;    
@@ -16,7 +16,7 @@
         top: 100%;
         opacity: 100%;
     }
-}   */
+}  
 
 .wave__wrap{
     display: block;
