@@ -12,7 +12,7 @@ const AdminPanel = () => {
   const [allData, setAllData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalBalance, setTotalBalance] = useState(0);
-  const itemsPerPage = 2;
+  const itemsPerPage = 15;
 
   const navigate = useNavigate();
 
