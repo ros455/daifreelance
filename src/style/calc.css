@@ -428,6 +428,18 @@
         width: 9px;
     }
 
+    .background{
+        margin-top: 155px;
+        left: 25px;
+        scale: 1.4;
+        
+    }
+
+    .wave__line {
+        rotate: -23deg;
+        scale: 1;
+    }
+
 }
 @media only screen and (max-width: 440px){
     .calc__wrap-item ul .number h1 {
