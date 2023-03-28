@@ -24,6 +24,13 @@
     text-align: center;
     color: #FFFFFF;
 
+    @media only screen and (max-width: 605px){
+        font-size: 12px;
+    }
+    @media only screen and (max-width: 480px){
+        font-size: 10px;
+    }
+
     .table_item-date{
         border-right: 1px solid #9c63f7a2;   
         
@@ -49,14 +56,14 @@
         
     }
 
-    .table_item-p{
-        border-bottom: 1px solid #9c63f7a2;
+    // .table_item-p{
+    //     border-bottom: 1px solid #9c63f7a2;
 
-    }
+    // }
 
     .table_item-p--border{
-        border-right: 1px solid #9c63f7a2;   
-        opacity: 0.65; 
+        border-right: 1px solid #9c63f78d;   
+        // opacity: 0.65; 
     }
 
     .table_item-balance {

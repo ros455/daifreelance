@@ -3,8 +3,9 @@
 .calc__wraper{
     position: relative;
     max-width: 100%;
-    overflow: hidden;
-    height: 1127px;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    height: 100vh;
     background: #1F2A3C  0 0/cover no-repeat;
     color: #fff;
     font-family: 'Kanit', sans-serif;
@@ -19,11 +20,11 @@
 
 .background{
     position: absolute;
-    top: 47%;
+    top: 60%;
     left: 0;
     width: 100%;
     z-index: 1;
-    opacity: 60%;
+    opacity: 50%;
 
 }
 
@@ -31,7 +32,7 @@
 
 .calc__head{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* background: linear-gradient(269.87deg, rgba(125, 209, 193, 0.05) 0%, rgba(136, 125, 193, 0.05) 100%); */
     z-index: 100;
     background: #2a3951;
@@ -84,7 +85,7 @@
     width: 80%;
     max-width: 600px;
     height: 244px;
-    margin: 100px 0 70px 0;
+    margin: 25px 0 25px 0;
 }
 
 .content__wraper .logo img{
@@ -105,7 +106,7 @@
     display: flex;
     width: 70%;
     justify-content: space-around;
-    margin-bottom: 78px;
+    margin-bottom: 65px;
 }
 
 .calc__wrap-item{
@@ -318,7 +319,7 @@
 
 .calc__footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 30px;
 }
 
@@ -381,7 +382,7 @@
     }
 
     .calc__wraper{
-        height: 100%;
+        height: 100vh;
     }
 
     .air__speed{
