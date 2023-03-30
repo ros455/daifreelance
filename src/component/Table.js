@@ -2,7 +2,6 @@ import React,{useState, useEffect} from 'react';
 import '../style/table.scss';
 
 const Table = ({currentItems, totalBalance}) => {
-  
     return (
       <div className="wrap_table">
         <div className="block_table">
@@ -11,7 +10,7 @@ const Table = ({currentItems, totalBalance}) => {
             <h3 className="table_item-emision">Emission</h3>
             <h3 className="table_item-rate">Rate</h3>
             <h3 className="table_item-air">Air</h3>
-            <h3 className="table_item-balance">Balance {totalBalance}</h3>
+            <h3 className="table_item-balance">Balance</h3>
           </div>
           {currentItems &&
             currentItems.map((el) => (
@@ -21,7 +20,7 @@ const Table = ({currentItems, totalBalance}) => {
                 </p>
                 <p className="table_item-p table_item-p--border">{el.emission}</p>
                 <p className="table_item-p table_item-p--border">{el.rate}</p>
-                <p className="table_item-p table_item-p--border">{el.air}</p>
+                <p className="table_item-p table_item-p--border">{el.air * 100}</p>
                 <p className="table_item-p table_item-balance">{el?.balans}</p>
               </div>
             ))}
