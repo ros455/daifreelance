@@ -24,6 +24,13 @@
     text-align: center;
     color: #FFFFFF;
 
+    @media only screen and (max-width: 605px){
+        font-size: 12px;
+    }
+    @media only screen and (max-width: 480px){
+        font-size: 10px;
+    }
+
     .table_item-date{
         border-right: 1px solid #9c63f7a2;   
         
@@ -49,14 +56,14 @@
         
     }
 
-    .table_item-p{
-        border-bottom: 1px solid #9c63f7a2;
+    // .table_item-p{
+    //     border-bottom: 1px solid #9c63f7a2;
 
-    }
+    // }
 
     .table_item-p--border{
-        border-right: 1px solid #9c63f7a2;   
-        opacity: 0.65; 
+        border-right: 1px solid #9c63f78d;   
+        // opacity: 0.65; 
     }
 
     .table_item-balance {
@@ -104,23 +111,37 @@
 
 // }
 
-// .active_number {
-//     animation-name: live;
-//     animation-duration: 0.5s;
-//     animation-iteration-count: inherit;
-//     animation-fill-mode: forwards; /* зупинка анімації на кінцевому стані */
-//   }
+.active_number {
+    animation-name: live;
+    animation-duration: 0.15s;
+    animation-iteration-count: inherit;
+    // animation-fill-mode: forwards; /* зупинка анімації на кінцевому стані */
+  }
   
-//   @keyframes live {
-//     0% {
-//       padding-top: 0px;
-//     }
+  @keyframes live {
+    0% {
+      padding-top: 0px;
+    }
 
-//     50% {
-//         padding-top: 5%;
-//     }
+    50% {
+        padding-top: 10%;
+    }
   
-//     100% {
-//       padding-top: 0%;
-//     }
-//   }
+    100% {
+        padding-top: 0px;
+    }
+  }
+
+  @keyframes live2 {
+    0% {
+        padding-bottom: 0px;
+      }
+  
+      50% {
+          padding-bottom: 10%;
+      }
+    
+      100% {
+          padding-bottom: 0%;
+      }
+  }

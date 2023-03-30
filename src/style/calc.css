@@ -4,7 +4,8 @@
     position: relative;
     max-width: 100%;
     overflow: hidden;
-    height: 1127px;
+    overflow-x: hidden;
+    height: 100vh;
     background: #1F2A3C  0 0/cover no-repeat;
     color: #fff;
     font-family: 'Kanit', sans-serif;
@@ -19,11 +20,11 @@
 
 .background{
     position: absolute;
-    top: 47%;
+    top: 60%;
     left: 0;
     width: 100%;
     z-index: 1;
-    opacity: 60%;
+    opacity: 50%;
 
 }
 
@@ -31,7 +32,7 @@
 
 .calc__head{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* background: linear-gradient(269.87deg, rgba(125, 209, 193, 0.05) 0%, rgba(136, 125, 193, 0.05) 100%); */
     z-index: 100;
     background: #2a3951;
@@ -84,7 +85,7 @@
     width: 80%;
     max-width: 600px;
     height: 244px;
-    margin: 100px 0 70px 0;
+    margin: 25px 0 25px 0;
 }
 
 .content__wraper .logo img{
@@ -103,9 +104,9 @@
 
 .calc__wrap_row{
     display: flex;
-    width: 50%;
+    width: 70%;
     justify-content: space-around;
-    margin-bottom: 78px;
+    margin-bottom: 65px;
 }
 
 .calc__wrap-item{
@@ -142,6 +143,7 @@
     align-items: center;
     justify-content: space-around;
     padding: 1% 5%;
+    overflow: hidden;
 }   
 
 .number_block {
@@ -318,20 +320,29 @@
 
 .calc__footer{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0 30px;
 }
 
 
 @media only screen and (max-width: 1850px){
     .calc__wrap_row{
-        width: 100%;
+        width: 70%;
     }
 
-
+}
+@media only screen and (max-width: 1410px){
+    .calc__wrap_row{
+        width: 80%;
+    }
 
 }
 @media only screen and (max-width: 1153px){
+    
+    .calc__wrap_row{
+        width: 100%;
+    }
+
     .calc__wrap-item{
         flex: 0 1 50%;
     }
@@ -342,6 +353,21 @@
 
 
 }
+
+
+@media only screen and (max-height: 801px){
+
+    .content__wraper .logo{
+        position: absolute;
+        top: -120px;
+        max-width: 12%;
+    }
+
+    .calc__head{
+        margin-bottom: 40px;
+    }
+}
+
 
 @media only screen and (max-width: 1055px){
     .air__speed{
@@ -356,6 +382,12 @@
 }
 
 @media only screen and (max-width: 950px){
+    
+    .calc__wraper{
+        overflow:scroll;
+    }
+
+    
     .calc__wrap_row{
         flex-direction: column;
         width: 85%;
@@ -372,13 +404,17 @@
     }
 
     .calc__wraper{
-        height: 100%;
+        height: 100vh;
     }
 
     .air__speed{
         scale: 1;
         top: 11%;
         left: 47%;
+    }
+
+    .calc__wrap .calc__wrap_row .air .debug{
+        font-size: 19px;
     }
 }
 
@@ -388,14 +424,40 @@
     }
 
 }
+@media only screen and (max-width: 488px){
+    .calc__wrap-item ul .number h1 {
+        width: 9px;
+    }
+
+    .background{
+        margin-top: 155px;
+        left: 25px;
+        scale: 1.4;
+        
+    }
+
+    .wave__line {
+        rotate: -23deg;
+        scale: 1;
+    }
+
+}
+@media only screen and (max-width: 440px){
+    .calc__wrap-item ul .number h1 {
+        width: 8px;
+    }
+
+}
+@media only screen and (max-width: 410px){
+    .calc__wrap-item ul .number h1 {
+        width: 7px;
+    }
+
+}
 
 
 @media only screen and (max-width: 393px){
     
-    .calc__wrap-item ul .number{
-        font-size: 3vh;
-    }
-
     .calc__head .contact {
         line-height: 20px;
     }
@@ -415,14 +477,29 @@
         margin: 10px 0;
     }
 
-    .calc__wrap-item ul .number{
-        font-size: 2vh;
+    .calc__wrap-item ul .number {
+        font-size: 10px;
+    }
+
+    .calc__wrap-item ul .number h1 {
+        width: 6px;
     }
 
     .air__speed{
         scale: 0.8;
         top: 20%;
     }
+    .calc__wrap .calc__wrap_row .air .debug{
+        font-size: 15px;
+    }
 }
 
+@media only screen and (max-width: 329px){
+    .calc__wrap-item ul .number {
+        font-size: 9px;
+    }
 
+    .calc__wrap-item ul .number h1 {
+        width: 5px;
+    }
+}
