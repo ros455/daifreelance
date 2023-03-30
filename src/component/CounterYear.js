@@ -29,6 +29,8 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
     setParsArr(beforeDot.split('').concat('.', afterDot.split('')));
   }, [currVal]);
 
+  // Change
+
   return (
       <div className='number_block'>
         <>
