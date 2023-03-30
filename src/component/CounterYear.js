@@ -31,8 +31,6 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
 
   return (
       <div className='number_block'>
-        {isBool 
-        ?
         <>
               {parseArr &&
       dafaultArr.map((num, idx) => (
@@ -52,7 +50,6 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
             {!isNaN(parseArr[idx]) 
             ?
             Number(parseArr[idx]) + 1 == 10 ? '0' : Number(parseArr[idx]) + 1
-            // Number(parseArr[idx]) + 1
             : 
             ''}
            </p>
@@ -61,7 +58,6 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
             {!isNaN(parseArr[idx]) 
             ?
             parseArr[idx] - 1 < 0 ? '9' : parseArr[idx] - 1 
-            // parseArr[idx] - 1 
             : 
             ''}
            </p>
@@ -71,10 +67,7 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
             <>
             {parseArr[idx] - 2 == -2 ? '8' : ''}
             {parseArr[idx] - 2 == -1 ? '9' : ''}
-            {/* {parseArr[idx] - 2 == -1 ? '9' : ''} */}
-            {/* {parseArr[idx] - 2  > 0 ? parseArr[idx] - 2 : ''} */}
             {Number(parseArr[idx]) - 2 > -1 ? Number(parseArr[idx]) - 2 : ''}
-            {/* {parseArr[idx] - 2} */}
             </>
             : 
             ''}
@@ -82,15 +75,6 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
         </div>
       ))}
         </>
-        :
-        <>
-        {parseArr &&
-      dafaultArr.map((num, idx) => (
-        <div key={idx} className='number' >
-          <h1>{parseArr[idx]}</h1>
-        </div>
-      ))}
-        </>}
     </div>
   );
 };
