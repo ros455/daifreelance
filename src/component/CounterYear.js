@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import '../style/table.scss';
 
-const CounterYear = ({ firstValue, val, time }) => {
+const CounterYear = ({ firstValue, val, time, isBool }) => {
   const [currVal, setCurrVal] = useState(firstValue);
   const [parseArr, setParsArr] = useState([]);
   const [dafaultArr, setDefaultArr] = useState(Array.from({ length: 31 }).fill('1'));
-
+  console.log('Time',time);
+  
   useEffect(() => {
     const iterations = Math.ceil(Math.abs(val - firstValue) / 0.000001);
+    console.log('iterations',iterations);
     const timePerIteration = 31536000000 / iterations;
 
     const intervalId = setInterval(() => {
@@ -22,16 +24,19 @@ const CounterYear = ({ firstValue, val, time }) => {
 
   useEffect(() => {
     const digits = currVal.toFixed(15).toString().split('.');
-    const beforeDot = digits[0].padStart(15, '0');
+    const beforeDot = isBool ? digits[0].padStart(15, '0') : digits[0].padStart(0, '0');
     const afterDot = digits.length > 1 ? digits[1].padEnd(15, '0') : Array.from({ length: 15 }).fill('0').join('');
     setParsArr(beforeDot.split('').concat('.', afterDot.split('')));
   }, [currVal]);
 
   return (
       <div className='number_block'>
-      {parseArr &&
+        {isBool 
+        ?
+        <>
+              {parseArr &&
       dafaultArr.map((num, idx) => (
-        <div key={idx} className={` ${parseArr[idx] == '9' && idx < 29 ? 'active_number' : ''} number`} >
+        <div key={idx} className={` ${parseArr[idx] == '9' ? 'active_number' : ''} number`} >
            <p className='after_number'>
             {!isNaN(parseArr[idx]) 
             ?
@@ -49,6 +54,16 @@ const CounterYear = ({ firstValue, val, time }) => {
            </p>
         </div>
       ))}
+        </>
+        :
+        <>
+        {parseArr &&
+      dafaultArr.map((num, idx) => (
+        <div key={idx} className='number' >
+          <h1>{parseArr[idx]}</h1>
+        </div>
+      ))}
+        </>}
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Table = ({currentItems, totalBalance}) => {
             <h3 className="table_item-emision">Emission</h3>
             <h3 className="table_item-rate">Rate</h3>
             <h3 className="table_item-air">Air</h3>
-            <h3 className="table_item-balance">Balance {totalBalance}</h3>
+            <h3 className="table_item-balance">Balance</h3>
           </div>
           {currentItems &&
             currentItems.map((el) => (
