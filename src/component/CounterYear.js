@@ -37,10 +37,22 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
               {parseArr &&
       dafaultArr.map((num, idx) => (
         <div key={idx} className={` ${parseArr[idx] == '9' ? 'active_number' : ''} number`} >
+            <p className='after_number'>
+            {!isNaN(parseArr[idx]) 
+            ?
+            <>
+            {Number(parseArr[idx]) + 2 == 10 ? '0' : ''}
+            {Number(parseArr[idx]) + 2 == 11 ? '1' : ''}
+            {Number(parseArr[idx]) + 2 < 10 && Number(parseArr[idx]) + 2 != 10 ? Number(parseArr[idx]) + 2 : ''}
+            </>
+            : 
+            ''}
+           </p>
            <p className='after_number'>
             {!isNaN(parseArr[idx]) 
             ?
-            Number(parseArr[idx]) + 1 == '10' ? '0' : Number(parseArr[idx]) + 1
+            Number(parseArr[idx]) + 1 == 10 ? '0' : Number(parseArr[idx]) + 1
+            // Number(parseArr[idx]) + 1
             : 
             ''}
            </p>
@@ -48,7 +60,22 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
           <p className='before_number'>
             {!isNaN(parseArr[idx]) 
             ?
-            parseArr[idx] - 1 == '-1' ? '0' : parseArr[idx] - 1 
+            parseArr[idx] - 1 < 0 ? '9' : parseArr[idx] - 1 
+            // parseArr[idx] - 1 
+            : 
+            ''}
+           </p>
+           <p className='before_number'>
+            {!isNaN(parseArr[idx]) 
+            ?
+            <>
+            {parseArr[idx] - 2 == -2 ? '8' : ''}
+            {parseArr[idx] - 2 == -1 ? '9' : ''}
+            {/* {parseArr[idx] - 2 == -1 ? '9' : ''} */}
+            {/* {parseArr[idx] - 2  > 0 ? parseArr[idx] - 2 : ''} */}
+            {Number(parseArr[idx]) - 2 > -1 ? Number(parseArr[idx]) - 2 : ''}
+            {/* {parseArr[idx] - 2} */}
+            </>
             : 
             ''}
            </p>
