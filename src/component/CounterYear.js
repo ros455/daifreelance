@@ -31,7 +31,7 @@ const CounterYear = ({ firstValue, val, time }) => {
       <div className='number_block'>
       {parseArr &&
       dafaultArr.map((num, idx) => (
-        <div key={idx} className={` ${parseArr[idx] == '9' && idx < 29 ? 'active_number' : ''} number`} >
+        <div key={idx} className={` ${parseArr[idx] == '7'  ? 'active_number' : ''} number`} >
            <p className='after_number'>
             {!isNaN(parseArr[idx]) 
             ?
