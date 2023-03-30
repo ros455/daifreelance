@@ -146,6 +146,9 @@
     overflow: hidden;
 }   
 
+
+
+
 .number_block {
     display: flex;
     align-items: center;
@@ -162,6 +165,7 @@
     line-height: 30px;
     letter-spacing: 0.15em;
     padding: 0px 1px;
+    /* padding-top: 39px; */
     
 }   
 
@@ -175,14 +179,14 @@
     color: grey;
     padding-top: 2px;
     line-height: 6px;
-    padding-bottom: 25px;
+    padding-bottom: 6px;
     filter: blur(0.5px);
 }
 
 .after_number {
     font-size: 8px;
     color: grey;
-    padding-top: 25px;
+    padding-top: 6px;
     line-height: 6px;
     filter: blur(0.5px);
 }
@@ -208,6 +212,14 @@
     text-align: center;
     color: #81ADC0;
 
+}
+
+.emission__wraper_numb{
+    /* padding-bottom: 39px; */
+}
+
+.rate__wraper_numb{
+    padding-left: 35%;
 }
 
 /* *,
@@ -317,6 +329,12 @@
     z-index: 100;
 }
 
+.calc__wrap-item .air__title{
+    /* font-size: 20px ; */
+    text-transform: uppercase;
+    padding-bottom: 37px;
+}
+
 
 .calc__footer{
     display: flex;
@@ -365,6 +383,18 @@
 
     .calc__head{
         margin-bottom: 40px;
+        height: 80px;
+    }
+
+    .content__wraper .logo {
+        position: absolute;
+        /* width: 20%; */
+        top: -22%;
+        max-width: 12%;
+    }
+
+    .content__wraper .logo img {
+        width: 165px;
     }
 }
 
