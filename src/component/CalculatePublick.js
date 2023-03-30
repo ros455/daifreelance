@@ -15,7 +15,7 @@ const CalculatePublick = () => {
     const [lastAir, setLastAir] = useState(0);
     const [time, setTime] = useState(0);
     const [totalbalance, setTotalbalance] = useState(0);
-    const [totalbalanceHeader, setTotalbalanceHeader] = useState(0);
+    const [totalbalanceFinal, setTotalbalanceFinal] = useState(0);
     const [angle, setAngle] = useState(0);
 
     useEffect(() => {
@@ -31,11 +31,10 @@ const CalculatePublick = () => {
             allData.forEach((item) => {
                 totalSumHeader = item.balans + totalSumHeader
             })
-            setTotalbalanceHeader(totalSumHeader.toFixed(0))
+            setTotalbalanceFinal(totalSumHeader.toFixed(0))
 
             for (let i = 0; i < allData.length - 1; i++) {
                 totalSum = allData[i].balans + totalSum
-
             }
             setTotalbalance(totalSum.toFixed(0));
             returnLastItem(allData)
@@ -104,6 +103,8 @@ const CalculatePublick = () => {
     window.location.href='mailto:info@daiwo.ai'
   }
 
+  console.log('lastRate',lastRate * (lastAir / 100) + lastRate);
+
     return (
         <div>
             <div className='calc__wraper'>
@@ -126,7 +127,7 @@ const CalculatePublick = () => {
                                 <h2>Rate</h2>
                                 <ul>
                                     <div>{lastRate &&
-                                        <Counter val={lastRate} time={0.1}/>
+                                        <CounterYear firstValue={Number(lastRate)} val={Number(lastRate * (lastAir / 100) + lastRate)} time={time} isBool={false}/>
                                     }</div>
                                 </ul>
                             </div>
@@ -147,7 +148,7 @@ const CalculatePublick = () => {
                             <div className='calc__wrap-item balance'>
                                 <h2>Balance</h2>
                                 <ul>
-                                    <CounterYear firstValue={Number(totalbalance)} val={Number(totalbalanceHeader)} time={time} />
+                                    <CounterYear firstValue={Number(totalbalance + (lastRate * lastEmission))} val={Number(totalbalanceFinal)} time={time} isBool={true}/>
                                 </ul>
                             </div>
                         </div>
