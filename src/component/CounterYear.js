@@ -33,8 +33,6 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
 
   return (
       <div className='number_block'>
-        {isBool 
-        ?
         <>
               {parseArr &&
       dafaultArr.map((num, idx) => (
@@ -79,15 +77,6 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
         </div>
       ))}
         </>
-        :
-        <>
-        {parseArr &&
-      dafaultArr.map((num, idx) => (
-        <div key={idx} className='number' >
-          <h1>{parseArr[idx]}</h1>
-        </div>
-      ))}
-        </>}
     </div>
   );
 };
