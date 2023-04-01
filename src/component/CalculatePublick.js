@@ -102,13 +102,7 @@ const CalculatePublick = () => {
   const handleEmail = () => {
     window.location.href='mailto:info@daiwo.ai'
   }
-
-  console.log('totalbalance',Number(totalbalance) + (lastRate * lastEmission));
-  console.log('lastRate',lastRate);
-  console.log('lastEmission',lastEmission);
-  console.log('totalbalanceFinal',totalbalanceFinal);
-
-
+  
     return (
         <div>
             <div className='calc__wraper'>
