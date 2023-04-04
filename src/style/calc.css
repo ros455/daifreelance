@@ -533,3 +533,8 @@
         width: 5px;
     }
 }
+
+
+.emission ul .emission__wraper_numb .number_block .number p{
+    font-size: 14px;
+   }
