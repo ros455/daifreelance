@@ -102,13 +102,7 @@ const CalculatePublick = () => {
   const handleEmail = () => {
     window.location.href='mailto:info@daiwo.ai'
   }
-
-  console.log('totalbalance',Number(totalbalance) + (lastRate * lastEmission));
-  console.log('lastRate',lastRate);
-  console.log('lastEmission',lastEmission);
-  console.log('totalbalanceFinal',totalbalanceFinal);
-
-
+  
     return (
         <div>
             <div className='calc__wraper'>
@@ -152,7 +146,7 @@ const CalculatePublick = () => {
                             <div className='calc__wrap-item balance'>
                                 <h2>Balance</h2>
                                 <ul>
-                                    <CounterYear firstValue={Number(totalbalance) + (lastRate * lastEmission)} val={Number(totalbalanceFinal)} time={time} isBool={true}/>
+                                    <CounterYear firstValue={lastRate * lastEmission} val={(lastRate * (lastAir / 100) * lastEmission) + lastRate * lastEmission} time={time} isBool={true}/>
                                 </ul>
                             </div>
                         </div>
