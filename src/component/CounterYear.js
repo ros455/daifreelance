@@ -5,11 +5,9 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
   const [currVal, setCurrVal] = useState(firstValue);
   const [parseArr, setParsArr] = useState([]);
   const [dafaultArr, setDefaultArr] = useState(Array.from({ length: 31 }).fill('1'));
-  console.log('Time',time);
   
   useEffect(() => {
     const iterations = Math.ceil(Math.abs(val - firstValue) / 0.000001);
-    console.log('iterations',iterations);
     const timePerIteration = 31536000000 / iterations;
 
     const intervalId = setInterval(() => {
@@ -29,19 +27,29 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
     setParsArr(beforeDot.split('').concat('.', afterDot.split('')));
   }, [currVal]);
 
+  // Change
+
   return (
       <div className='number_block'>
-        {isBool 
-        ?
         <>
               {parseArr &&
       dafaultArr.map((num, idx) => (
-        <div key={idx} className={` ${parseArr[idx] == '7'  ? 'active_number' : ''} number`} >
-
+        <div key={idx} className={` ${parseArr[idx] == '9' ? 'active_number' : ''} number`} >
+            <p className='after_number'>
+            {!isNaN(parseArr[idx]) 
+            ?
+            <>
+            {Number(parseArr[idx]) + 2 == 10 ? '0' : ''}
+            {Number(parseArr[idx]) + 2 == 11 ? '1' : ''}
+            {Number(parseArr[idx]) + 2 < 10 && Number(parseArr[idx]) + 2 != 10 ? Number(parseArr[idx]) + 2 : ''}
+            </>
+            : 
+            ''}
+           </p>
            <p className='after_number'>
             {!isNaN(parseArr[idx]) 
             ?
-            Number(parseArr[idx]) + 1 == '10' ? '0' : Number(parseArr[idx]) + 1
+            Number(parseArr[idx]) + 1 == 10 ? '0' : Number(parseArr[idx]) + 1
             : 
             ''}
            </p>
@@ -49,22 +57,24 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
           <p className='before_number'>
             {!isNaN(parseArr[idx]) 
             ?
-            parseArr[idx] - 1 == '-1' ? '0' : parseArr[idx] - 1 
+            parseArr[idx] - 1 < 0 ? '9' : parseArr[idx] - 1 
+            : 
+            ''}
+           </p>
+           <p className='before_number'>
+            {!isNaN(parseArr[idx]) 
+            ?
+            <>
+            {parseArr[idx] - 2 == -2 ? '8' : ''}
+            {parseArr[idx] - 2 == -1 ? '9' : ''}
+            {Number(parseArr[idx]) - 2 > -1 ? Number(parseArr[idx]) - 2 : ''}
+            </>
             : 
             ''}
            </p>
         </div>
       ))}
         </>
-        :
-        <>
-        {parseArr &&
-      dafaultArr.map((num, idx) => (
-        <div key={idx} className='number' >
-          <h1>{parseArr[idx]}</h1>
-        </div>
-      ))}
-        </>}
     </div>
   );
 };

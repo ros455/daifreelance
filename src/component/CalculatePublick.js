@@ -102,9 +102,7 @@ const CalculatePublick = () => {
   const handleEmail = () => {
     window.location.href='mailto:info@daiwo.ai'
   }
-
-  console.log('lastRate',lastRate * (lastAir / 100) + lastRate);
-
+  
     return (
         <div>
             <div className='calc__wraper'>
@@ -126,7 +124,7 @@ const CalculatePublick = () => {
                             <div className='calc__wrap-item rate'>
                                 <h2>Rate</h2>
                                 <ul>
-                                    <div>{lastRate &&
+                                    <div className='rate__wraper_numb'>{lastRate &&
                                         <CounterYear firstValue={Number(lastRate)} val={Number(lastRate * (lastAir / 100) + lastRate)} time={time} isBool={false}/>
                                     }</div>
                                 </ul>
@@ -134,7 +132,7 @@ const CalculatePublick = () => {
                             <div className='calc__wrap-item emission'>
                                 <h2>Emission</h2>
                                 <ul>
-                                    <div>{lastEmission &&
+                                    <div className='emission__wraper_numb'>{lastEmission &&
                                         <Counter val={lastEmission} time={0.1}/>}
                                     </div>
                                 </ul>
@@ -142,13 +140,15 @@ const CalculatePublick = () => {
                         </div>
                         <div className='calc__wrap_row'>
                             <div className='calc__wrap-item air'>
-                                <h2>Air</h2>
+                                <h2 className='air__title'>Air</h2>
                                 <AirCounter angle={angle} lastAir={lastAir}/>
                                 </div>
                             <div className='calc__wrap-item balance'>
                                 <h2>Balance</h2>
                                 <ul>
-                                    <CounterYear firstValue={Number(totalbalance + (lastRate * lastEmission))} val={Number(totalbalanceFinal)} time={time} isBool={true}/>
+                                    <div className='rate__wraper_numb'>
+                                    <CounterYear firstValue={lastRate * lastEmission} val={(lastRate * (lastAir / 100) * lastEmission) + lastRate * lastEmission} time={time} isBool={false}/>
+                                    </div>
                                 </ul>
                             </div>
                         </div>
