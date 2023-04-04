@@ -56,46 +56,46 @@ const CalculatePublick = () => {
 
     if(num == 0) {
         setAngle(num + 215)
-    } else if (num <= 3) {
-        setAngle(num + 225)
     } else if (num <= 5) {
-        setAngle(num + 235)
-    } else if (num <= 8) {
-        setAngle(num + 245)
+        setAngle(num + 222)
     } else if (num <= 10) {
-        setAngle(num + 259)
-    } else if (num <= 13) {
-        setAngle(num + 270)
+        setAngle(num + 232)
     } else if (num <= 15) {
-        setAngle(num + 286)
-    } else if (num <= 18) {
-        setAngle(num + 297)
+        setAngle(num + 240)
     } else if (num <= 20) {
-        setAngle(num + 310)
-    } else if (num <= 23) {
-        setAngle(num + 320)
+        setAngle(num + 251)
     } else if (num <= 25) {
-        setAngle(num + 336)
-    } else if (num <= 28) {
-        setAngle(num + 345)
+        setAngle(num + 265)
     } else if (num <= 30) {
-        setAngle(num + 360)
-    } else if (num <= 33) {
-        setAngle(num + 375)
+        setAngle(num + 275)
     } else if (num <= 35) {
-        setAngle(num + 383)
-    } else if (num <= 38) {
-        setAngle(num + 400)
+        setAngle(num + 280)
     } else if (num <= 40) {
-        setAngle(num + 412)
-    } else if (num <= 43) {
-        setAngle(num + 425)
+        setAngle(num + 292)
     } else if (num <= 45) {
-        setAngle(num + 435)
-    } else if (num <= 48) {
-        setAngle(num + 445)
+        setAngle(num + 305)
     } else if (num <= 50) {
-        setAngle(num + 457)
+        setAngle(num + 312)
+    } else if (num <= 55) {
+        setAngle(num + 320)
+    } else if (num <= 60) {
+        setAngle(num + 330)
+    } else if (num <= 65) {
+        setAngle(num + 342)
+    } else if (num <= 70) {
+        setAngle(num + 349)
+    } else if (num <= 75) {
+        setAngle(num + 358)
+    } else if (num <= 80) {
+        setAngle(num + 370)
+    } else if (num <= 85) {
+        setAngle(num + 382)
+    } else if (num <= 90) {
+        setAngle(num + 389)
+    } else if (num <= 95) {
+        setAngle(num + 395)
+    } else if (num <= 100) {
+        setAngle(num + 405)
     }
   },[lastAir])
 
