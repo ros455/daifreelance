@@ -7,17 +7,27 @@ const Counter = ({ val, time}) => {
 
   useEffect(() => {
     if(currVal < val) {
-      setTimeout(setCurrVal, time, currVal + 2);
+      setTimeout(setCurrVal, time, currVal + 10);
     } 
     else {
       setCurrVal(Math.min(currVal,val))
     }
 }, [currVal]);
 
+useEffect(() => {
+  setParseArr(currVal.toString().split(''))
+},[currVal])
 
+console.log('parseArr',parseArr);
   return (
     <div className='number_block'>
-      {currVal}
+      {parseArr.map((item,idx) => (
+        <div key={idx} className='number'>
+        <p>
+          {item}
+        </p>
+        </div>
+      ))}
     </div>
   );
 };

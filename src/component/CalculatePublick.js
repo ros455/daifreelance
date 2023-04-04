@@ -146,7 +146,7 @@ const CalculatePublick = () => {
                             <div className='calc__wrap-item balance'>
                                 <h2>Balance</h2>
                                 <ul>
-                                    <CounterYear firstValue={lastRate * lastEmission} val={(lastRate * (lastAir / 100) * lastEmission) + lastRate * lastEmission} time={time} isBool={true}/>
+                                    <CounterYear firstValue={lastRate * lastEmission} val={(lastRate * (lastAir / 100) * lastEmission) + lastRate * lastEmission} time={time} isBool={false}/>
                                 </ul>
                             </div>
                         </div>
