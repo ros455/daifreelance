@@ -7,28 +7,17 @@ const Counter = ({ val, time}) => {
 
   useEffect(() => {
     if(currVal < val) {
-      setTimeout(setCurrVal, time, currVal + 1);
+      setTimeout(setCurrVal, time, currVal + 2);
     } 
     else {
       setCurrVal(Math.min(currVal,val))
     }
 }, [currVal]);
 
-  useEffect(() => {
-    const digits = currVal.toFixed(15).toString().split('.');
-    const beforeDot = digits[0].padStart(0, '0');
-    const afterDot = digits.length > 1 ? digits[1].padEnd(15, '0') : ''.padEnd(15, '0');
-    setParseArr(beforeDot.split('').concat('.', afterDot.split('')));
-  }, [currVal]);
 
   return (
     <div className='number_block'>
-      {parseArr &&
-        parseArr.map((num, idx) => (
-          <div key={idx} className='number'>
-            <h1 className={num === '.' ? 'dot' : ''}>{num}</h1>
-          </div>
-        ))}
+      {currVal}
     </div>
   );
 };
