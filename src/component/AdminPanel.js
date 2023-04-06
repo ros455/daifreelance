@@ -74,8 +74,8 @@ const AdminPanel = () => {
 
   const handleAirFunc = (e) => {
     const airInFunc = e.target.value;
-    if(airInFunc > 50) {
-      setAir(0.5);
+    if(airInFunc > 100) {
+      setAir(1);
       return
     }
 
