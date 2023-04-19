@@ -5,7 +5,8 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
   const [currVal, setCurrVal] = useState(firstValue);
   const [parseArr, setParsArr] = useState([]);
   const [dafaultArr, setDefaultArr] = useState(Array.from({ length: 31 }).fill('1'));
-  
+
+
   useEffect(() => {
     const iterations = Math.ceil(Math.abs(val - firstValue) / 0.000001);
     const timePerIteration = 31536000000 / iterations;
@@ -34,7 +35,7 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
         <>
               {parseArr &&
       dafaultArr.map((num, idx) => (
-        <div key={idx} className={` ${parseArr[idx] == '9' ? 'active_number' : ''} number`} >
+        <div key={idx} className={`${parseArr[idx] == '.' ? 'dot' : 'main_number'} ${idx - 1 < parseArr.indexOf('.') ? 'purpure' : ''} number`} >
             <p className='after_number'>
             {!isNaN(parseArr[idx]) 
             ?
@@ -53,7 +54,11 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
             : 
             ''}
            </p>
-          <h1 className={`${parseArr[idx] == '.' ? 'dot' : ''} main_number`}>{parseArr[idx]}</h1>
+          <div className={`${parseArr[idx] == '.' ? 'dot' : ''} main_number`}>
+            <h1>
+            {parseArr[idx]}
+            </h1>
+          </div>
           <p className='before_number'>
             {!isNaN(parseArr[idx]) 
             ?
@@ -62,7 +67,7 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
             ''}
            </p>
            <p className='before_number'>
-            {!isNaN(parseArr[idx]) 
+            {!isNaN(parseArr[idx])
             ?
             <>
             {parseArr[idx] - 2 == -2 ? '8' : ''}

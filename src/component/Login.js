@@ -31,7 +31,7 @@ const Login = () => {
 
     return (
         <div className="login_wrap">
-            <div className="login_bloc">
+            <div className="login_block">
             <h2 className="login_title">Вхід для адміністрації</h2>
             <div className="input_wrap">
                 <input type='text' 
