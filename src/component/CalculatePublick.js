@@ -6,6 +6,8 @@ import '../style/circule.scss'
 import CounterYear from './CounterYear';
 import Counter from './Counter';
 import AirCounter from './AirCounter';
+// import { ReactComponent as MyCurrency } from './mycurrency.svg';
+// import { Svg } from 'react-svg';
 
 
 const CalculatePublick = () => {
@@ -113,7 +115,7 @@ const CalculatePublick = () => {
                     <div className='calc__head-item site__name'>
                         <img src='/img/miniLogo.svg' />
                     </div>
-                    <div onClick={handleEmail} className='calc__head-item contact'>Contact us</div>
+                    <div onClick={handleEmail} className='calc__head-item contact'>Contacte me</div>
                 </div>
                 <div className='content__wraper'>
                     <div className='logo'>
@@ -122,8 +124,18 @@ const CalculatePublick = () => {
                     <div className='calc__wrap'>
                         <div className='calc__wrap_row'>
                             <div className='calc__wrap-item rate'>
-                                <h2>Rate</h2>
+                                <div className='price_and_button__wrap'>
+                                <h2>Price</h2>
+                                <div className='price_button__wrap'>
+                                    <button className='button_buy'>Buy</button>
+                                    <button className='button_sell'>Sell</button>
+                                </div>
+                                </div>
                                 <ul>
+                                <div className='display_currency__wrap'>
+                                    <p className='currency_text'>$/</p>
+                                    <img src='/mycurrency.svg' className='currency_image'/>
+                                </div>
                                     <div className='rate__wraper_numb'>{lastRate &&
                                         <CounterYear firstValue={Number(lastRate)} val={Number(lastRate * (lastAir / 100) + lastRate)} time={time} isBool={false}/>
                                     }</div>
@@ -132,6 +144,9 @@ const CalculatePublick = () => {
                             <div className='calc__wrap-item emission'>
                                 <h2>Emission</h2>
                                 <ul>
+                                <div className='display_currency_emission__wrap'>
+                                    <img src='/mycurrency.svg' className='currency_emmision_image'/>
+                                </div>
                                     <div className='emission__wraper_numb'>{lastEmission &&
                                         <Counter val={lastEmission} time={0.1}/>}
                                     </div>
@@ -140,12 +155,15 @@ const CalculatePublick = () => {
                         </div>
                         <div className='calc__wrap_row'>
                             <div className='calc__wrap-item air'>
-                                <h2 className='air__title'>Air</h2>
+                                <h2 className='air__title'>Yield</h2>
                                 <AirCounter angle={angle} lastAir={lastAir}/>
                                 </div>
                             <div className='calc__wrap-item balance'>
                                 <h2>Balance</h2>
                                 <ul>
+                                <div className='display_currency__wrap'>
+                                    <p className='currency_text'>$</p>
+                                </div>
                                     <div className='rate__wraper_numb'>
                                     <CounterYear firstValue={lastRate * lastEmission} val={(lastRate * (lastAir / 100) * lastEmission) + lastRate * lastEmission} time={time} isBool={false}/>
                                     </div>
@@ -156,7 +174,7 @@ const CalculatePublick = () => {
                 </div>
                 <div className='calc__footer'>
                     <div className='calc__footer-email'> <img src='/img/email.svg' /> info@daiwo.ai</div>
-                    <div className='calc__footer-info'>Neural economic network D.A.I.Wo Ver 1.00</div>
+                    <div className='calc__footer-info'>Neural economic network D.A.I.Wo Ver 1.01</div>
                 </div>
             </div>
         </div>
