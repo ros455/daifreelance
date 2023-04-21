@@ -8,8 +8,8 @@ const Table = ({currentItems, totalBalance}) => {
           <div className="table_item">
             <h3 className="table_item-date">Date</h3>
             <h3 className="table_item-emision">Emission</h3>
-            <h3 className="table_item-rate">Rate</h3>
-            <h3 className="table_item-air">Air</h3>
+            <h3 className="table_item-rate">Price</h3>
+            <h3 className="table_item-air">Yield</h3>
             <h3 className="table_item-balance">Balance</h3>
           </div>
           {currentItems &&
