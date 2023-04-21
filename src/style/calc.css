@@ -335,7 +335,6 @@
 
 .calc__wrap-item .air__title{
     /* font-size: 20px ; */
-    text-transform: uppercase;
     padding-bottom: 37px;
 }
 
@@ -364,13 +363,16 @@
 }
 
 .button_buy {
-    padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0);
-    margin: 0px 5px;
-    border: 1px green solid;
+    background-color: transparent;
+    border: 1px solid #01b301;
     border-radius: 8px;
-    color: green;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #01a301;
+    font-weight: 600;
+    margin: 0 10px;
+    padding: 8px 25px;
+    transition: background-color .3s ease,color .3s ease;
+    /* box-shadow: 1px 1px 1px 1px #05c105; */
+    box-shadow: 0px 1px 17px 0px rgba(0, 130, 36, 0.53), inset 0px 2px 10px 0px rgba(0, 174, 48, 0.56);
 }
 
 .button_buy:hover {
@@ -379,13 +381,15 @@
 }
 
 .button_sell {
-    padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0);
-    margin: 0px 5px;
-    border: 1px red solid;
+    background-color: transparent;
+    border: 1px solid rgb(255, 17, 17);
     border-radius: 8px;
-    color: red;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: rgb(255, 17, 17);
+    font-weight: 600;
+    margin: 0 10px;
+    padding: 8px 25px;
+    transition: background-color .3s ease,color .3s ease;
+    box-shadow: 0px 1px 17px 0px rgba(255, 0, 0, 0.53), inset 0px 2px 10px 0px rgba(255, 0, 0, 0.56);
 }
 
 .button_sell:hover {
@@ -403,10 +407,12 @@
 .currency_text {
     color: #71bbb0;
     font-size: 22px;
+    padding-bottom: 3px;
 }
 
 .currency_image {
-    height: 20px;
+    padding-top: 2px;
+    height: 26px;
 }
 
 .display_currency_emission__wrap {
@@ -414,10 +420,12 @@
     align-items: center;
     position: absolute;
     right: 150px;
+    padding-bottom: 2px;
 }
 
 .currency_emmision_image {
-    height: 30px;
+    height: 35px;
+    padding-top: 6px;
 }
 
 @media only screen and (max-width: 1850px){
