@@ -411,8 +411,8 @@
 }
 
 .currency_image {
-    padding-top: 2px;
-    height: 26px;
+    /* padding-top: 2px; */
+    height: 28px;
 }
 
 .display_currency_emission__wrap {
