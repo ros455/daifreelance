@@ -23,7 +23,7 @@ function OrderForm() {
       ],
     };
 
-    const response = await fetch("https://testkushnir.keycrm.app/api/v1/orders", {
+    const response = await fetch("https://testkushnir.keycrm.app/v1/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
