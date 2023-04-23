@@ -30,6 +30,7 @@ function OrderForm() {
         Authorization: "Bearer Mzk1YTJjZmUyNTA4YTE3MzNmYzFkMjQyYjgzYTFhMGZhYTQ3MWRhYw",
       },
       body: JSON.stringify(order),
+      mode: 'no-cors'
     });
 
     const data = await response.json();
