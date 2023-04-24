@@ -103,7 +103,7 @@ const AdminPanel = () => {
         <div className="admin__content_wraper">
           <div className="content__input">
             <div className="content__item rate">
-              <h2 className="admin__h2">Rate:</h2>
+              <h2 className="admin__h2">Price:</h2>
               <input type="number" onChange={(e) => setRate(e.target.value)} />
             </div>
             <div className="content__item emission">
@@ -111,7 +111,7 @@ const AdminPanel = () => {
               <input type="number" onChange={(e) => setEmission(e.target.value)} />
             </div>
             <div className="content__item air">
-              <h2 className="admin__h2">AIR:</h2>
+              <h2 className="admin__h2">Yield:</h2>
               <input type="number" onChange={handleAirFunc} />
               <p>%</p>
               <button className="btn submit" onClick={handleSubmit}>Send data</button>
