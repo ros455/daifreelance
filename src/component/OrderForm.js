@@ -8,17 +8,30 @@ function OrderForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // const order = {
+    //   source_id: 1,
+    //   buyer: {
+    //     full_name: name,
+    //     phone: phone,
+    //   },
+    //   products: [
+    //     {
+    //       price: price,
+    //       quantity: 1,
+    //       name: "Product"
+    //     },
+    //   ],
+    // };
+
     const order = {
       source_id: 1,
       buyer: {
-        full_name: name,
-        phone: phone,
+        full_name: "Alex",
+        phone: 2332234
       },
       products: [
         {
-          price: price,
-          quantity: 1,
-          name: "Product"
+          price: 4000
         },
       ],
     };
