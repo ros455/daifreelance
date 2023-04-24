@@ -54,6 +54,9 @@ function OrderForm() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Cache-Control": "no-cache",
+        "Pragma": "no-cache",
         Authorization: "Bearer Mzk1YTJjZmUyNTA4YTE3MzNmYzFkMjQyYjgzYTFhMGZhYTQ3MWRhYw",
       },
       body: JSON.stringify(order),
