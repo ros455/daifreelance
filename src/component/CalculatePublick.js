@@ -148,7 +148,7 @@ const CalculatePublick = () => {
                                     <img src='/mycurrency.svg' className='currency_emmision_image'/>
                                 </div>
                                     <div className='emission__wraper_numb'>{lastEmission &&
-                                        <Counter val={lastEmission} time={0.1}/>}
+                                        <Counter val={lastEmission}/>}
                                     </div>
                                 </ul>
                             </div>
