@@ -22,22 +22,8 @@ function OrderForm() {
         },
       ],
     };
-    // const order = {
-    //   "source_id": 1,
-    //   "buyer": {
-    //     "full_name": "Alex",
-    //     "phone": "+380662732124"
-    //   },
-    //   "products": [
-    //     {
-    //       "price": price,
-    //       "quantity": 1,
-    //       "name": "Product"
-    //     }
-    //   ]
-    // };
 
-    const response = await fetch(" https://openapi.keycrm.app/v1/orders", {
+    const response = await fetch("https://testkushnir.keycrm.app/v1/orders", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
