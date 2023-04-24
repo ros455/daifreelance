@@ -400,8 +400,9 @@
 .display_currency__wrap {
     position: absolute;
     display: flex;
-    right: 70px;
+    right: 50px;
     align-items: center;
+    padding-bottom: 3px;
 }
 
 .currency_text {
