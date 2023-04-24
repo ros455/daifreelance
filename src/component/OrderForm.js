@@ -50,7 +50,7 @@ function OrderForm() {
     //   ]
     // };
 
-    const response = await fetch("https://openapi.keycrm.app/v1/orders", {
+    const response = await fetch("https://openapi.keycrm.app/v1/order", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
