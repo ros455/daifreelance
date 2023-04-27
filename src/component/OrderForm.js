@@ -70,6 +70,7 @@ function OrderForm() {
       'Authorization': 'Bearer ' + token
     },
     body: dataString,
+    mode: 'no-cors'
   })
   .then(response => response.json())
   .then(data => console.log(data))
