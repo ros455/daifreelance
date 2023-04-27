@@ -13,9 +13,6 @@ function OrderForm() {
       "source_id": 10,
       "source_uuid": "115",
       "buyer_comment": "I want this sentence to be my `buyer` comment on KeyCRM",
-      "manager_id": 1,
-      "manager_comment": "Handle till weekend",
-      "promocode": "MERRYCHRISTMAS",
       "discount_percent": 11.5,
       "discount_amount": 9.99,
       "shipping_price": 2.5,
@@ -25,7 +22,7 @@ function OrderForm() {
       "buyer": {
         "full_name": "Test Kushnir",
         "email": "john.doe@mail.app",
-        "phone": "+1 555-234-1234"
+        "phone": "+ 380635530117"
       }
     };
     
