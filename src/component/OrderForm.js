@@ -24,9 +24,9 @@ function OrderForm() {
     // };
 
     const order = {
-      source_id: 1,
+      source_id: 10,
       buyer: {
-        full_name: "Alex",
+        full_name: "Test sklo Kalculator",
         phone: 2332234
       },
       products: [
@@ -50,6 +50,8 @@ function OrderForm() {
     //   ]
     // };
 
+    const token = 'ODQ0MDA5YjE3ZmJhMGYwNzQxMTFlN2FmYmRlZjE0MzEwNDljYzM5OQ'
+
     const response = await fetch("https://openapi.keycrm.app/v1/order", {
       method: "POST",
       headers: {
@@ -57,7 +59,7 @@ function OrderForm() {
         "Accept": "application/json",
         "Cache-Control": "no-cache",
         "Pragma": "no-cache",
-        Authorization: "Bearer Mzk1YTJjZmUyNTA4YTE3MzNmYzFkMjQyYjgzYTFhMGZhYTQ3MWRhYw",
+        Authorization: `Bearer . ${token}`,
       },
       body: JSON.stringify(order),
       mode: 'no-cors'
