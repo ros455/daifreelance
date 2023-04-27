@@ -59,7 +59,7 @@ function OrderForm() {
         "Accept": "application/json",
         "Cache-Control": "no-cache",
         "Pragma": "no-cache",
-        "Authorization": "Bearer . ODQ0MDA5YjE3ZmJhMGYwNzQxMTFlN2FmYmRlZjE0MzEwNDljYzM5OQ"
+        "Authorization": "Bearer ODQ0MDA5YjE3ZmJhMGYwNzQxMTFlN2FmYmRlZjE0MzEwNDljYzM5OQ"
       },
       body: JSON.stringify(order),
       mode: 'no-cors'
