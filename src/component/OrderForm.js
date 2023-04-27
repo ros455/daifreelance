@@ -23,7 +23,7 @@ function OrderForm() {
       "taxes": 2.5,
       "ordered_at": "2021-12-21 14:44:00",
       "buyer": {
-        "full_name": "John Doe",
+        "full_name": "Test Kushnir",
         "email": "john.doe@mail.app",
         "phone": "+1 555-234-1234"
       }
