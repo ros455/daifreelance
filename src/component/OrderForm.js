@@ -93,7 +93,7 @@ function OrderForm() {
       "level_name":"INFO",
       "channel":"production",
       "datetime":"2023-04-27T13:23:55.968776+00:00","extra":{},
-      'authorization': "Bearer ODQ0MDA5YjE3ZmJhMGYwNzQxMTFlN2FmYmRlZjE0MzEwNDljYzM5OQ"
+      'authorization': "Bearer . ODQ0MDA5YjE3ZmJhMGYwNzQxMTFlN2FmYmRlZjE0MzEwNDljYzM5OQ"
     },
     body: dataString,
     mode: 'no-cors'
