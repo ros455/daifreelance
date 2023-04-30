@@ -400,7 +400,7 @@
 .display_currency__wrap {
     position: absolute;
     display: flex;
-    right: 50px;
+    right: 10px;
     align-items: center;
     padding-bottom: 3px;
 }
@@ -557,10 +557,6 @@
         scale: 1;
     }
 
-    .display_currency__wrap {
-        right: 50px;
-    }
-
     .display_currency_emission__wrap {
         right: 130px;
     }
@@ -571,10 +567,6 @@
         width: 8px;
     }
 
-    .display_currency__wrap {
-        right: 40px;
-    }
-
     .display_currency_emission__wrap {
         right: 120px;
     }
@@ -583,10 +575,6 @@
 @media only screen and (max-width: 410px){
     .calc__wrap-item ul .number h1 {
         width: 7px;
-    }
-
-    .display_currency__wrap {
-        right: 35px;
     }
 
     .display_currency_emission__wrap {
@@ -605,10 +593,6 @@
     .air__speed{
         scale: 1;
         top: 10%;
-    }
-
-    .display_currency__wrap {
-        right: 30px;
     }
 
     .display_currency_emission__wrap {
@@ -641,12 +625,11 @@
         font-size: 15px;
     }
 
-    .display_currency__wrap {
-        right: 20px;
-    }
-
     .display_currency_emission__wrap {
         right: 80px;
+    }
+    .currency_text {
+        font-size: 18px;
     }
 }
 
@@ -657,10 +640,6 @@
 
     .calc__wrap-item ul .number h1 {
         width: 5px;
-    }
-
-    .display_currency__wrap {
-        right: 10px;
     }
 
     .display_currency_emission__wrap {
