@@ -420,7 +420,7 @@
     display: flex;
     align-items: center;
     position: absolute;
-    right: 120px;
+    right: 10px;
     padding-bottom: 2px;
 }
 
@@ -557,18 +557,10 @@
         scale: 1;
     }
 
-    .display_currency_emission__wrap {
-        right: 130px;
-    }
-
 }
 @media only screen and (max-width: 440px){
     .calc__wrap-item ul .number h1 {
         width: 8px;
-    }
-
-    .display_currency_emission__wrap {
-        right: 120px;
     }
 
 }
@@ -576,9 +568,8 @@
     .calc__wrap-item ul .number h1 {
         width: 7px;
     }
-
-    .display_currency_emission__wrap {
-        right: 110px;
+    .rate__wraper_numb{
+        padding-left: 25%;
     }
 
 }
@@ -593,10 +584,6 @@
     .air__speed{
         scale: 1;
         top: 10%;
-    }
-
-    .display_currency_emission__wrap {
-        right: 90px;
     }
 }
 
@@ -625,9 +612,6 @@
         font-size: 15px;
     }
 
-    .display_currency_emission__wrap {
-        right: 80px;
-    }
     .currency_text {
         font-size: 18px;
     }
@@ -642,7 +626,7 @@
         width: 5px;
     }
 
-    .display_currency_emission__wrap {
-        right: 70px;
+    .rate__wraper_numb{
+        padding-left: 15%;
     }
 }
