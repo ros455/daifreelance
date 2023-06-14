@@ -21,7 +21,7 @@ const CalculatePublick = () => {
     const [angle, setAngle] = useState(0);
 
     useEffect(() => {
-        fetch("https://calc-server.herokuapp.com/getall")
+        fetch("http://45.94.157.184:4444/getall")
             .then((res) => res.json())
             .then((res) => setAllData(res));
     }, []);
