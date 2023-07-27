@@ -17,7 +17,7 @@ const AdminPanel = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://calc-server.herokuapp.com/getall")
+    fetch("http://45.94.157.184:4444/getall")
       .then((res) => res.json())
       .then((res) => setAllData(res.reverse()));
   }, []);
@@ -55,7 +55,7 @@ const AdminPanel = () => {
   };
 
   const handleSubmit = () => {
-    fetch('https://calc-server.herokuapp.com/create', {
+    fetch('http://45.94.157.184:4444/create', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
