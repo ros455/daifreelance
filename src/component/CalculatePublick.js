@@ -6,6 +6,8 @@ import '../style/circule.scss'
 import CounterYear from './CounterYear';
 import Counter from './Counter';
 import AirCounter from './AirCounter';
+import { BsFillPhoneFill } from 'react-icons/bs';
+import { BiRotateLeft } from 'react-icons/bi';
 // import { ReactComponent as MyCurrency } from './mycurrency.svg';
 // import { Svg } from 'react-svg';
 
@@ -107,6 +109,19 @@ const CalculatePublick = () => {
   
     return (
         <div>
+            <div className='alert_rotate'>
+                <div className='alert_item'>
+                    <p>To view, turn the device to landscape mode.</p>
+                    <div className='svg_wrap'>
+                        {/* <BiRotateLeft 
+                        className='svg_rotate'/> */}
+                        <div className='phone_wrap'>
+                            <BsFillPhoneFill
+                            className='svg_phone'/>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className='calc__wraper'>
                 <div className='background'>
                     <AnimWave/>
