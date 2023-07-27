@@ -17,7 +17,7 @@ const AdminPanel = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://45.94.157.184:4444/getall")
+    fetch("https://daiwo-serve-656cf56db76d.herokuapp.com/getall")
       .then((res) => res.json())
       .then((res) => setAllData(res.reverse()));
   }, []);
@@ -55,7 +55,7 @@ const AdminPanel = () => {
   };
 
   const handleSubmit = () => {
-    fetch('http://45.94.157.184:4444/create', {
+    fetch('https://daiwo-serve-656cf56db76d.herokuapp.com/create', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
