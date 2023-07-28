@@ -527,6 +527,7 @@
         background: rgba(31, 42, 60, 0.85);
         box-shadow: -4px -4px 10px #2B3649, 4px 4px 10px #131C2B;
         border-radius: 20px;
+        margin: 0 20px;
     }
     .alert_item p{
         background-color: transparent;
@@ -636,9 +637,9 @@
         flex-direction: column;
     }
 
-    .alert_rotate{
+    /* .alert_rotate{
         display: none;
-    }
+    } */
 
 }
 @media only screen and (max-width: 488px){
