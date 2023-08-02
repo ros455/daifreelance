@@ -125,6 +125,7 @@ const CalculatePublick = () => {
             <div className='calc__wraper'>
                 <div className='background'>
                     <AnimWave/>
+                    
                 </div>
                 <div className='calc__head'>
                     <div className='calc__head-item site__name'>

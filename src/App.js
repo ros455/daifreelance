@@ -6,6 +6,7 @@ import AdminPanel from './component/AdminPanel.js';
 import Login from './component/Login';
 import {Routes, Route} from 'react-router-dom';
 import OrderForm from './component/OrderForm';
+import TestLogo from './component/TestLogo';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='edit' element={<Login/>}/>
         <Route path='edit/admin' element={<AdminPanel/>}/>
         <Route path='order' element={<OrderForm/>}/>
+        <Route path='test' element={<TestLogo/>}/>
       </Routes>
          </div>
   );
