@@ -647,35 +647,3 @@
     animation-delay: 4s; 
 }
 
-
-@media only screen and (max-width: 488px){
-    @keyframes anim1{
-        0% {
-            top: 10%;    
-            opacity: 100%;
-        }
-    
-    
-        50%{
-            top: 0%;
-            opacity: 40%;
-        }
-    
-        100%{
-    
-            top: 10%;
-            opacity: 100%;
-        }
-    }  
-
-    /* .wave__line{
-        scale: 0.9;
-
-    } */
-
-    .wave{
-        scale: 0.5;
-    }
-
-    
-}
