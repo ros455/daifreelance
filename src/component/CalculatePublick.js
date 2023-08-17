@@ -141,7 +141,8 @@ const CalculatePublick = () => {
                         <div className='calc__wrap_row'>
                             <div className='calc__wrap-item rate'>
                                 <div className='price_and_button__wrap'>
-                                <h2>Price</h2>
+                                <h2 className='coin_price_style'
+                                style={{fontSize:'34px'}}>Coin Price</h2>
                                 <div className='price_button__wrap'>
                                     <button className='button_buy'>Buy</button>
                                     <button className='button_sell'>Sell</button>
@@ -177,7 +178,7 @@ const CalculatePublick = () => {
                                 <AirCounter angle={angle} lastAir={lastAir}/>
                                 </div>
                             <div className='calc__wrap-item balance'>
-                                <h2>Balance</h2>
+                                <h2>Market Cap</h2>
                                 <ul>
                                 <div className='display_currency__wrap'>
                                     <p className='currency_text'>$</p>
