@@ -15,6 +15,7 @@ const AirCounter = ({lastAir, angle}) => {
                         {lastAir && lastAir}
                     </div>
                     <div className="dot" style={{ transform: `rotate(${angle ? angle : 210}deg)` }}></div>
+                    
                 </div>
             </div>
         </>

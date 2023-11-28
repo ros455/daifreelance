@@ -17,7 +17,7 @@ const AdminPanel = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://daiwo-serve-656cf56db76d.herokuapp.com/getall")
+    fetch("https://api.daiwo.ai/getall")
       .then((res) => res.json())
       .then((res) => setAllData(res.reverse()));
   }, []);
