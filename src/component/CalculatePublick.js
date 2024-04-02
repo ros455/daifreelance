@@ -153,11 +153,11 @@ const CalculatePublick = () => {
                                     <p className='currency_text'>$/</p>
                                     <img src='/mycurrency.svg' className='currency_image'/>
                                 </div>
-                                    <div className='rate__wraper_numb'>
+                                    {/* <div className='rate__wraper_numb'>
                                     {lastRate &&
                                         <CounterYear firstValue={Number(lastRate)} val={Number(lastRate * (lastAir / 100) + lastRate)} time={time} isBool={false}/>
                                     }
-                                    </div>
+                                    </div> */}
                                 </ul>
                             </div>
                             <div className='calc__wrap-item emission'>

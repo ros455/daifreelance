@@ -5,8 +5,6 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
   const [currVal, setCurrVal] = useState(firstValue);
   const [parseArr, setParsArr] = useState([]);
   const [dafaultArr, setDefaultArr] = useState(Array.from({ length: 31 }).fill('1'));
-
-
   useEffect(() => {
     const iterations = Math.ceil(Math.abs(val - firstValue) / 0.000001);
     const timePerIteration = 31536000000 / iterations;
@@ -29,7 +27,6 @@ const CounterYear = ({ firstValue, val, time, isBool }) => {
   }, [currVal]);
 
   // Change
-
   return (
       <div className='number_block'>
         <>

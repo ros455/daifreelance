@@ -55,7 +55,7 @@ const AdminPanel = () => {
   };
 
   const handleSubmit = () => {
-    fetch('https://daiwo-serve-656cf56db76d.herokuapp.com/create', {
+    fetch('https://api.daiwo.ai/create', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
