@@ -1,0 +1,44 @@
+
+.test-wrap{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red
+}
+
+.logo-wrap{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-image:  url('../component/logo/1.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all 1s ease-in-out;
+    animation: 3s ease-in 1s infinite slidein;
+}
+
+@keyframes slidein {
+    0%{
+        background-image:  url('../component/logo/1.svg');
+    }
+    16%{
+        background-image:  url('../component/logo/2.svg');
+    }
+    32%{
+        background-image:  url('../component/logo/3.svg');
+    }
+    48%{
+        background-image:  url('../component/logo/4.svg');
+    }
+    64%{
+        background-image:  url('../component/logo/5.svg');
+    }
+    80%{
+        background-image:  url('../component/logo/6.svg');
+    }
+    100%{
+        background-image:  url('../component/logo/1.svg');
+    }
+}
